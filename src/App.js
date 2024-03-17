@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import HelloComponent from "./1.BasicReact/1.HelloComponent/HelloComponent";
+import CounterComponent from "./1.BasicReact/2.CounterComponent/CounterComponent";
 
 // App Component (Kind of HTMl + pure JS)
 
@@ -7,23 +9,17 @@ function App() {
   const a = 1 + 2;
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          utkarsh is nice Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>HEY THERE</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <HelloComponent name={"tarun"} />
+
+      <HelloComponent name={"utkarsh"} />
+
+      <HelloComponent name={"akash"} />
+      <HelloComponent /> */}
+
+      {/* REACT IS CALLING THE COUNTER COMPONENT FUNCTION  */}
+      <CounterComponent heading={"Counter for kids"} />
+    </>
   );
 }
 

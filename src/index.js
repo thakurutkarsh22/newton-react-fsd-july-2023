@@ -1,10 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import HelloComponent from "./1.BasicReact/1.HelloComponent/HelloComponent";
+import HelloClassComponent from "./1.BasicReact/1.HelloComponent/HelloClassComponent";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// React root
 root.render(
   <React.StrictMode>
     <App />
