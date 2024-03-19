@@ -6,8 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import HelloComponent from "./1.BasicReact/1.HelloComponent/HelloComponent";
 import HelloClassComponent from "./1.BasicReact/1.HelloComponent/HelloClassComponent";
 
+// document keyword is my REAL DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // React root
+//root is my  VIRTUAL DOM
 root.render(
   <React.StrictMode>
     <App />

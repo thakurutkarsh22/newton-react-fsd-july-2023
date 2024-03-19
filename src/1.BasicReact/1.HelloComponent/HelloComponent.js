@@ -7,10 +7,23 @@ function HelloComponent(props) {
   // const name = props.name;
 
   return (
-    <>
-      <div>Hey there {name}</div>
-    </>
+    <div style={{ background: "red", padding: "20px", margin: "20px" }}>
+      Hey there {name}
+      <div>alexa</div>
+    </div>
+
+    // THIS WILL NEVER WORK
+    // {/* <div>alexa</div> */}
   );
+
+  // BEHIND THE SCENE you are doing this...
+  // From a single funciton you cant sent 2 values BACK
+  return React.createElement(
+    "div",
+    { style },
+    React.createElement("div", {}, "alexa")
+  );
+  return React.createElement("div", {}, ` alexa`);
 }
 
 export default HelloComponent;

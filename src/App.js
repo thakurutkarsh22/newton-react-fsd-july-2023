@@ -2,11 +2,29 @@ import logo from "./logo.svg";
 import "./App.css";
 import HelloComponent from "./1.BasicReact/1.HelloComponent/HelloComponent";
 import CounterComponent from "./1.BasicReact/2.CounterComponent/CounterComponent";
+import ListComponent from "./1.BasicReact/3.ListComponent/ListComponent";
 
 // App Component (Kind of HTMl + pure JS)
 
 function App() {
   const a = 1 + 2;
+
+  const listStudent = [
+    {
+      name: "utkasrh",
+      classs: 12,
+    },
+
+    {
+      name: "arun",
+      classs: 9,
+    },
+
+    {
+      name: "amit",
+      classs: 8,
+    },
+  ];
 
   return (
     <>
@@ -18,7 +36,9 @@ function App() {
       <HelloComponent /> */}
 
       {/* REACT IS CALLING THE COUNTER COMPONENT FUNCTION  */}
-      <CounterComponent heading={"Counter for kids"} />
+      {/* <CounterComponent heading={"Counter for kids"} /> */}
+
+      <ListComponent students={listStudent} />
     </>
   );
 }
