@@ -28,9 +28,18 @@ function MultipleState() {
         utkarsh
       </button>
 
-      <button>arun</button>
+      <button
+        onClick={() => {
+          setName("arun");
+        }}
+      >
+        arun
+      </button>
     </>
   );
 }
 
 export default MultipleState;
+
+// 1. in this component we want to clap and inceremtn the count
+// 2. when i click on names, Name should be displayed on top.

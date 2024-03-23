@@ -4,7 +4,10 @@ import HelloComponent from "./1.BasicReact/1.HelloComponent/HelloComponent";
 import CounterComponent from "./1.BasicReact/2.CounterComponent/CounterComponent";
 import ListComponent from "./1.BasicReact/3.ListComponent/ListComponent";
 import ConditionalRendering from "./1.BasicReact/4.ConditionalRendering/ConditionalRendering";
-import MultipleState from "./1.BasicReact/5.MultipleState/MultipleState";
+import MultipleState from "./1.BasicReact/5.MultipleState/1.Multiple_Use_State/MultipleState";
+import SingleUseState from "./1.BasicReact/5.MultipleState/2.Single_Use_State/SingleUseState";
+import MainContentComponent from "./1.BasicReact/6.WrapperBeautifulComponent/MainContentComponent";
+import BeautifulWrapper from "./1.BasicReact/6.WrapperBeautifulComponent/BeautifulWrapper";
 
 // App Component (Kind of HTMl + pure JS)
 
@@ -48,7 +51,17 @@ function App() {
 
       {/* <ConditionalRendering /> */}
 
-      <MultipleState />
+      {/* <MultipleState /> */}
+      {/* <SingleUseState />
+
+      <div> asadsada </div>
+
+      <input type="text" /> */}
+
+      <BeautifulWrapper beauty={"lipshadeadsadasdas"}>
+        <MainContentComponent />
+        <MainContentComponent />
+      </BeautifulWrapper>
     </>
   );
 }
