@@ -8,12 +8,15 @@ function Parent() {
     console.log(infomation, "infomation HAS BEEN RECIEVED TO PARENT ");
   };
 
+  // childCommunicatorHandler("asdasdasd")
+
   return (
     <>
       <h1>Parent Body</h1>
 
       <Child
         childCommunicatorHandler={childCommunicatorHandler}
+        name={"utkarsh"}
         bulletPoint={bulletPoint}
       />
     </>

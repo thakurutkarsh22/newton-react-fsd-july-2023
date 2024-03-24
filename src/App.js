@@ -8,7 +8,10 @@ import MultipleState from "./1.BasicReact/5.MultipleState/1.Multiple_Use_State/M
 import SingleUseState from "./1.BasicReact/5.MultipleState/2.Single_Use_State/SingleUseState";
 import MainContentComponent from "./1.BasicReact/6.WrapperBeautifulComponent/MainContentComponent";
 import BeautifulWrapper from "./1.BasicReact/6.WrapperBeautifulComponent/BeautifulWrapper";
-import Parent from "./2.Communication/2.ChildToParent/Parent";
+import Parent from "./2.Communication/3.Sibling/Parent";
+import KeysAndList from "./3.KeysAndList/KeysAndListProblem";
+import KeysAndListSolution from "./3.KeysAndList/KeysAndListSolution";
+// import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
 // App Component (Kind of HTMl + pure JS)
@@ -65,7 +68,12 @@ function App() {
         <MainContentComponent />
       </BeautifulWrapper> */}
 
-      <Parent />
+      {/* <Parent /> */}
+
+      {/* <Parent /> */}
+
+      {/* <KeysAndList /> */}
+      <KeysAndListSolution />
     </>
   );
 }
