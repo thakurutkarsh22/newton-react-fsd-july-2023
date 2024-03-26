@@ -9,8 +9,9 @@ import SingleUseState from "./1.BasicReact/5.MultipleState/2.Single_Use_State/Si
 import MainContentComponent from "./1.BasicReact/6.WrapperBeautifulComponent/MainContentComponent";
 import BeautifulWrapper from "./1.BasicReact/6.WrapperBeautifulComponent/BeautifulWrapper";
 import Parent from "./2.Communication/3.Sibling/Parent";
-import KeysAndList from "./3.KeysAndList/KeysAndListProblem";
-import KeysAndListSolution from "./3.KeysAndList/KeysAndListSolution";
+import KeysAndList from "./3.KeysAndList/1.NoKeyProblems/KeysAndListProblem";
+import KeysAndListSolution from "./3.KeysAndList/1.NoKeyProblems/KeysAndListSolution";
+import IndexAsAKey from "./3.KeysAndList/2.IndexAsKey/IndexAsAKey";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -73,7 +74,9 @@ function App() {
       {/* <Parent /> */}
 
       {/* <KeysAndList /> */}
-      <KeysAndListSolution />
+      {/* <KeysAndListSolution /> */}
+
+      <IndexAsAKey />
     </>
   );
 }
