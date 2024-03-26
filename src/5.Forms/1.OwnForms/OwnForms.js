@@ -9,11 +9,19 @@ const DEFAULT_VALUE_OF_FORM = {
   dob: "",
 };
 
+const DEFAULT_ERROR_OF_FORM = {
+  firstName: "",
+  secondName: "",
+  email: "",
+  phone: "",
+};
+
 function OwnForm() {
   const [form, setForm] = useState(DEFAULT_VALUE_OF_FORM);
+  const [errorState, setErrorState] = useState(DEFAULT_ERROR_OF_FORM);
 
-  console.log("latest from", form);
-  console.log("latest from", form.secondName);
+  console.log("FORM ::::", form);
+  console.log("ERROR ::: ", errorState);
 
   function onChangeHandler(event, key) {
     setForm((oldValue) => {
@@ -22,6 +30,31 @@ function OwnForm() {
         [key]: event.target.value,
       };
     });
+
+    ValidationForFields(event, key);
+  }
+
+  /* ----------- VALIDATION  ---------------- **/
+
+  function ValidationForFields(event, key) {
+    const value = String(event.target.value);
+
+    if (key === "firstName") {
+      const nameRegex = /^[A-Za-z ]+$/;
+      const regexVal = value.match(nameRegex);
+      if (!regexVal) {
+        setErrorState((old) => {
+          return {
+            ...old,
+            firstName: "Hey we should Write good name what is this!!!",
+          };
+        });
+      }
+    } else if (key === "secondName") {
+    } else if (key === "email") {
+    } else if (key === "phone") {
+    } else {
+    }
   }
 
   return (
@@ -38,6 +71,10 @@ function OwnForm() {
           id="firstName"
         />
 
+        <div style={{ color: "red", fontWeight: "bold" }}>
+          {errorState.firstName}
+        </div>
+
         <br />
         <br />
         <br />
@@ -50,6 +87,10 @@ function OwnForm() {
             onChangeHandler(event, "secondName");
           }}
         />
+
+        <div style={{ color: "red", fontWeight: "bold" }}>
+          {errorState.secondName}
+        </div>
 
         <br />
         <br />
@@ -64,6 +105,10 @@ function OwnForm() {
           }}
         />
 
+        <div style={{ color: "red", fontWeight: "bold" }}>
+          {errorState.email}
+        </div>
+
         <br />
         <br />
         <br />
@@ -76,6 +121,10 @@ function OwnForm() {
             onChangeHandler(event, "phone");
           }}
         />
+
+        <div style={{ color: "red", fontWeight: "bold" }}>
+          {errorState.phone}
+        </div>
 
         <br />
         <br />
