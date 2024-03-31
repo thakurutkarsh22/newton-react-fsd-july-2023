@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ErrorContainer from "./ErrorContainer";
 
 const DEFAULT_VALUE_OF_FORM = {
   firstName: "",
@@ -23,7 +24,43 @@ function OwnForm() {
   console.log("FORM ::::", form);
   console.log("ERROR ::: ", errorState);
 
+  //  ----- ******* SUBMISSION ********** ------------
+  function onFormSubmission(event) {
+    event.preventDefault();
+
+    // Validate ...
+    const isFormValid = onSubmissionValidateForm();
+
+    if (isFormValid) {
+      // Send the form Object to the server.
+      console.log("SEND THE FORM OBJECT TO THE SERVER");
+    } else {
+      // show the popup
+      alert("Form should be Vlaid");
+    }
+  }
+
+  function onSubmissionValidateForm() {
+    let isFormValid = true;
+
+    const keys = Object.keys(errorState);
+    console.log(keys, "keys");
+
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i];
+      if (errorState[key]) {
+        isFormValid = false;
+        break;
+      }
+    }
+
+    return isFormValid;
+  }
+
+  //  ----- XXXXXXXXX SUBMISSION XXXXXXXXXXX------------
+
   function onChangeHandler(event, key) {
+    // MAINLY THIS FUNCTION IS SETTING THE VALUES IN FORM
     setForm((oldValue) => {
       return {
         ...oldValue,
@@ -34,34 +71,86 @@ function OwnForm() {
     ValidationForFields(event, key);
   }
 
+  function onChangeErrorHandler(errorString, key) {
+    setErrorState((old) => {
+      return {
+        ...old,
+        [key]: errorString,
+      };
+    });
+  }
+
   /* ----------- VALIDATION  ---------------- **/
 
+  function getSpecialCharacters(value = "") {
+    // ""utkarsh@@@!@@@!@#""
+
+    const set = new Set();
+
+    for (let i = 0; i < value.length; i++) {
+      const ch = value.charAt(i); // 'u'
+      const chCode = Number(value.charCodeAt(i)); //117
+      console.log(typeof chCode);
+
+      if ((chCode >= 65 && chCode <= 90) || (chCode >= 97 && chCode <= 122)) {
+        // IT MEANS my character is a alphabet
+      } else {
+        // all the things are special character here
+        set.add(ch);
+      }
+    } // {'@', '%', '^'}
+
+    // arrOfSpecialChar MIGHT CONTAINER DUPLICATE VALUES WE DO NOT WANT THAT.
+
+    let arrOfSpecialChar = Array.from(set); // ['@', '%', '^']
+
+    return arrOfSpecialChar.join();
+  }
+
   function ValidationForFields(event, key) {
-    const value = String(event.target.value);
+    const value = String(event.target.value); // "UTKARSH~~~@@##$$"
+
+    const localError = {};
+
+    // array -> storage to  store ~~~@@##$$
 
     if (key === "firstName") {
       const nameRegex = /^[A-Za-z ]+$/;
       const regexVal = value.match(nameRegex);
-      if (!regexVal) {
-        setErrorState((old) => {
-          return {
-            ...old,
-            firstName: "Hey we should Write good name what is this!!!",
-          };
-        });
+      if (value && !regexVal) {
+        // Value is there but "UTKARSH~~~@@##$$"
+        localError[
+          key
+        ] = `Name SHould Be Only string No Special Character ${getSpecialCharacters(
+          value
+        )}`;
+      } else if (value && regexVal) {
+        // Value is there and it is good "UTKARSH"
+        // what Ever Error we had, CLear that
+        localError[key] = "";
+      } else {
+        // Value is EMPTY
+        localError[key] = "Required*";
       }
     } else if (key === "secondName") {
     } else if (key === "email") {
     } else if (key === "phone") {
     } else {
     }
+
+    setErrorState((old) => {
+      return {
+        ...old,
+        ...localError,
+      };
+    });
   }
 
   return (
     <>
       <h1>FORMS </h1>
 
-      <form>
+      <form onSubmit={onFormSubmission}>
         <label htmlFor="firstName">FirstName*</label>
         <input
           onChange={(event) => {
@@ -70,11 +159,7 @@ function OwnForm() {
           type="text"
           id="firstName"
         />
-
-        <div style={{ color: "red", fontWeight: "bold" }}>
-          {errorState.firstName}
-        </div>
-
+        <ErrorContainer errorString={errorState.firstName} />
         <br />
         <br />
         <br />
@@ -88,9 +173,7 @@ function OwnForm() {
           }}
         />
 
-        <div style={{ color: "red", fontWeight: "bold" }}>
-          {errorState.secondName}
-        </div>
+        <ErrorContainer errorString={errorState.secondName} />
 
         <br />
         <br />
@@ -105,9 +188,7 @@ function OwnForm() {
           }}
         />
 
-        <div style={{ color: "red", fontWeight: "bold" }}>
-          {errorState.email}
-        </div>
+        <ErrorContainer errorString={errorState.email} />
 
         <br />
         <br />
@@ -121,10 +202,7 @@ function OwnForm() {
             onChangeHandler(event, "phone");
           }}
         />
-
-        <div style={{ color: "red", fontWeight: "bold" }}>
-          {errorState.phone}
-        </div>
+        <ErrorContainer errorString={errorState.phone} />
 
         <br />
         <br />
@@ -172,3 +250,5 @@ export default OwnForm;
 // 1. Think about Values and UI  (whatever is in the UI should also be inside the state variable and VICA VERSA)
 // 2. ERROR STATE....
 // 3. TOUCH STATE ......
+
+// TODO: add tailwind.
