@@ -13,6 +13,9 @@ import KeysAndList from "./3.KeysAndList/1.NoKeyProblems/KeysAndListProblem";
 import KeysAndListSolution from "./3.KeysAndList/1.NoKeyProblems/KeysAndListSolution";
 import IndexAsAKey from "./3.KeysAndList/2.IndexAsKey/IndexAsAKey";
 import OwnForm from "./5.Forms/1.OwnForms/OwnForms";
+import LifeCycleOfFunctionalComponent from "./6.LifeCycleOfComponent/1.FunctionalComponent/LifeCycleOfFunctionalComponent";
+import HookUseEffect from "./7.Hook: useEffect/HookUseEffect";
+import { useState } from "react";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -20,6 +23,8 @@ import OwnForm from "./5.Forms/1.OwnForms/OwnForms";
 
 function App() {
   const a = 1 + 2;
+
+  const [flag, setFlag] = useState(true);
 
   const listStudent = [
     {
@@ -52,7 +57,7 @@ function App() {
       <HelloComponent /> */}
 
       {/* REACT IS CALLING THE COUNTER COMPONENT FUNCTION  */}
-      <CounterComponent heading={"Counter for kids"} />
+      {/* <CounterComponent heading={"Counter for kids"} /> */}
 
       {/* <ListComponent students={listStudent} /> */}
 
@@ -79,7 +84,17 @@ function App() {
 
       {/* <IndexAsAKey /> */}
 
-      <OwnForm />
+      {/* <OwnForm /> */}
+
+      {/* <LifeCycleOfFunctionalComponent /> */}
+      {flag && <HookUseEffect />}
+
+      <button
+        style={{ margin: "10px" }}
+        onClick={() => setFlag((oldVal) => !oldVal)}
+      >
+        APP BUTTON TO HIDE
+      </button>
     </>
   );
 }
