@@ -51,7 +51,7 @@ function HookUseEffect() {
     return () => {
       console.log("cleanup ::: UNMOUTING PHASE ");
     };
-  }, [counter2]);
+  }, [counter2, counter]);
 
   console.log("ABout to show the UI in 2 sec");
 

@@ -16,6 +16,7 @@ import OwnForm from "./5.Forms/1.OwnForms/OwnForms";
 import LifeCycleOfFunctionalComponent from "./6.LifeCycleOfComponent/1.FunctionalComponent/LifeCycleOfFunctionalComponent";
 import HookUseEffect from "./7.Hook: useEffect/HookUseEffect";
 import { useState } from "react";
+import PokemonApi from "./8.PokemonApi/PokemonApi";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -87,14 +88,16 @@ function App() {
       {/* <OwnForm /> */}
 
       {/* <LifeCycleOfFunctionalComponent /> */}
-      {flag && <HookUseEffect />}
+      {/* {flag && <HookUseEffect />}
 
       <button
         style={{ margin: "10px" }}
         onClick={() => setFlag((oldVal) => !oldVal)}
       >
         APP BUTTON TO HIDE
-      </button>
+      </button> */}
+
+      <PokemonApi />
     </>
   );
 }
