@@ -17,6 +17,7 @@ import LifeCycleOfFunctionalComponent from "./6.LifeCycleOfComponent/1.Functiona
 import HookUseEffect from "./7.Hook: useEffect/HookUseEffect";
 import { useState } from "react";
 import PokemonApi from "./8.PokemonApi/PokemonApi";
+import DigitalClock from "./9.DigitalClock/DigitalClock";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -97,7 +98,8 @@ function App() {
         APP BUTTON TO HIDE
       </button> */}
 
-      <PokemonApi />
+      {/* <PokemonApi /> */}
+      <DigitalClock />
     </>
   );
 }
