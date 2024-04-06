@@ -18,6 +18,7 @@ import HookUseEffect from "./7.Hook: useEffect/HookUseEffect";
 import { useState } from "react";
 import PokemonApi from "./8.PokemonApi/PokemonApi";
 import DigitalClock from "./9.DigitalClock/DigitalClock";
+import CounterClassComponent from "./10.ClassComponents/1.CounterComponenet/CounterComponent";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -86,7 +87,7 @@ function App() {
 
       {/* <IndexAsAKey /> */}
 
-      <OwnForm />
+      {/* <OwnForm /> */}
 
       {/* <LifeCycleOfFunctionalComponent /> */}
       {/* {flag && <HookUseEffect />}
@@ -100,6 +101,8 @@ function App() {
 
       {/* <PokemonApi /> */}
       {/* <DigitalClock /> */}
+
+      <CounterClassComponent />
     </>
   );
 }
