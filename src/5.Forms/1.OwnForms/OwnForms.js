@@ -38,6 +38,36 @@ function OwnForm() {
       // show the popup
       alert("Form should be Vlaid");
     }
+
+    // GET
+    // fetch("aasdasda.com"); // GET
+    // fetch("aasdasda.com", { method: "GET" }); // GET
+
+    // fetch("aasdasda.com?name=ram", { method: "GET" }); // GET
+
+    /*
+      THERE are 2 way to Send the Data from Browser to Server 
+      1. POST -> with Body 
+      2. GET -> with Query Params 
+
+    */
+
+    fetch(
+      `asadasdaasd.com?${"firstName" + "=" + form.firstName}&${
+        "secondName" + "=" + form.secondName
+      }&${"gender" + "=" + form.gender}`
+    ); // GET
+
+    // POST.
+    fetch("aasdasda.com", {
+      method: "POST",
+      body: JSON.stringify(form),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   }
 
   function onSubmissionValidateForm() {

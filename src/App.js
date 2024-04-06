@@ -86,7 +86,7 @@ function App() {
 
       {/* <IndexAsAKey /> */}
 
-      {/* <OwnForm /> */}
+      <OwnForm />
 
       {/* <LifeCycleOfFunctionalComponent /> */}
       {/* {flag && <HookUseEffect />}
@@ -99,7 +99,7 @@ function App() {
       </button> */}
 
       {/* <PokemonApi /> */}
-      <DigitalClock />
+      {/* <DigitalClock /> */}
     </>
   );
 }
