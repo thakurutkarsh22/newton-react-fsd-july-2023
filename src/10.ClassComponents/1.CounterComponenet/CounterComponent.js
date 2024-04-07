@@ -1,27 +1,45 @@
 import { Component } from "react";
+import HelloComponent from "../../1.BasicReact/1.HelloComponent/HelloComponent";
+import HelloClassComponent from "../../1.BasicReact/1.HelloComponent/HelloClassComponent";
 
 class CounterClassComponent extends Component {
+
   state = {
     count: 0,
-    abcdezz: 1,
-  };
+    name: "utkarsh"
+  }
 
   decrement() {
+    // context -> CounterClassComponent
     console.log("decrement ");
 
-    this.setState({
-      ...this.state,
-      count: -90,
-    });
+    // this.setState({
+    //   ...this.state,
+    //   count: -90,
+    // });
+
+    this.setState((oldState) => {
+      return {
+        ...oldState,
+        count: oldState.count - 1
+      }
+    })
   }
 
   increment() {
     console.log("increment ");
 
-    this.setState({
-      ...this.state,
-      count: 100,
-    });
+    // this.setState({
+    //   ...this.state,
+    //   count: 100,
+    // });
+
+    this.setState((oldState) => {
+      return {
+        ...oldState,
+        count: oldState.count + 1
+      }
+    })
   }
 
   render() {
@@ -45,6 +63,10 @@ class CounterClassComponent extends Component {
             <button onClick={this.increment.bind(this)}>+</button>
           </div>
         </div>
+
+          <div>--------- SELEPRATOR -------------</div>
+        <HelloComponent />
+        <HelloClassComponent />
       </>
     );
   }

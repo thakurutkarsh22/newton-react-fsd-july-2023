@@ -18,12 +18,12 @@ function HelloComponent(props) {
 
   // BEHIND THE SCENE you are doing this...
   // From a single funciton you cant sent 2 values BACK
-  return React.createElement(
-    "div",
-    { style },
-    React.createElement("div", {}, "alexa")
-  );
-  return React.createElement("div", {}, ` alexa`);
+  // return React.createElement(
+  //   "div",
+  //   { style },
+  //   React.createElement("div", {}, "alexa")
+  // );
+  // return React.createElement("div", {}, ` alexa`);
 }
 
 export default HelloComponent;

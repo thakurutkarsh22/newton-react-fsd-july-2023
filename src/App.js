@@ -19,6 +19,8 @@ import { useState } from "react";
 import PokemonApi from "./8.PokemonApi/PokemonApi";
 import DigitalClock from "./9.DigitalClock/DigitalClock";
 import CounterClassComponent from "./10.ClassComponents/1.CounterComponenet/CounterComponent";
+import HelloClassComponent from "./1.BasicReact/1.HelloComponent/HelloClassComponent";
+import PokemonApiClassComponent from "./10.ClassComponents/2.PokemonApiClassComponent/PokemonApiClassComponent";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -102,7 +104,10 @@ function App() {
       {/* <PokemonApi /> */}
       {/* <DigitalClock /> */}
 
-      <CounterClassComponent />
+      {/* <CounterClassComponent />
+      <HelloClassComponent /> */}
+
+      <PokemonApiClassComponent />
     </>
   );
 }
