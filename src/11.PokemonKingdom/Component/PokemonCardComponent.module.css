@@ -1,0 +1,17 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px 15px;
+  margin: 16px;
+  border-radius: 5px;
+
+  transition: transform 0.2s;
+}
+
+.card-container:hover {
+  z-index: 10;
+  transform: scale(1.5);
+}
