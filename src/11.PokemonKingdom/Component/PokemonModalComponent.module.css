@@ -1,0 +1,46 @@
+.popupcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 1000000;
+
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid black;
+
+  padding: 50px;
+}
+
+.leftcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-right: 10px;
+}
+
+.leftcontainerimage {
+  height: auto;
+  width: 200px;
+}
+
+.nametext {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.rightcontainer {
+  padding: 20px;
+
+  background-color: aqua;
+}
+
+.closebutton {
+}
