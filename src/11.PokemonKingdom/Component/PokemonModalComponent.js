@@ -2,7 +2,7 @@ import styles from "./PokemonModalComponent.module.css";
 import stylesCard from "./PokemonCardComponent.module.css";
 
 function PokemonModalComponent(props) {
-  const { pokemon } = props;
+  const { pokemon, onClose } = props;
   const { height, weight, stats = [], id, name, type, image } = pokemon;
 
   return (
@@ -12,8 +12,11 @@ function PokemonModalComponent(props) {
         className={styles.closebutton}
         onClick={() => {
           console.log("close this Popup");
+          onClose();
         }}
-      ></div>
+      >
+        X
+      </div>
 
       {/* left */}
 
@@ -26,8 +29,12 @@ function PokemonModalComponent(props) {
 
       <div className={styles.rightcontainer}>
         <div>
-          <p>Weight: {weight}</p>
-          <p>height: {height}</p>
+          <p>
+            <span>Weight:</span> {weight}
+          </p>
+          <p>
+            <span>height:</span> {height}
+          </p>
         </div>
 
         {/* STATS */}
@@ -39,7 +46,7 @@ function PokemonModalComponent(props) {
 
             return (
               <p>
-                Stat{index + 1}: {name}
+                <span>Stat{index + 1}:</span> {name}
               </p>
             );
           })}
@@ -53,7 +60,7 @@ function PokemonModalComponent(props) {
 
             return (
               <p>
-                Bs{index + 1}: {base_stat}
+                <span>Bs{index + 1}:</span> {base_stat}
               </p>
             );
           })}
