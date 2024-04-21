@@ -4,10 +4,21 @@ import { Link } from "react-router-dom";
 function Login({ email, password, setLoggedIn }) {
   const [emailval, setemailval] = useState("");
   const [passval, setpassval] = useState("");
+
+  function submitHandler(event) {
+    event.preventDefault();
+
+    if (emailval === email && password === passval) {
+      setLoggedIn(true);
+    } else {
+      alert("this user is not registerd");
+    }
+  }
+
   return (
     <div id="loginPage">
       <h1 id="login-tag">Login</h1>
-      <form>
+      <form onSubmit={submitHandler}>
         <h3>Email</h3>
         <input
           placeholder="abc@gmail.com"

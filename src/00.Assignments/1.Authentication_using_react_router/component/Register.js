@@ -1,14 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Register({ emailChange, passwordChange }) {
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
+  const navigate = useNavigate();
+
+  function submitHandler(event) {
+    event.preventDefault();
+
+    // these are function provided by Parent
+    emailChange(newEmail);
+    passwordChange(newPassword);
+
+    if (newEmail && newPassword) {
+      navigate("/");
+    }
+  }
+
   return (
     <div id="registerPage">
       <h1 id="register-tag">Register</h1>
-      <form>
+      <form onSubmit={submitHandler}>
         <h3>Email</h3>
         <input
           placeholder="abc@gmail.com"

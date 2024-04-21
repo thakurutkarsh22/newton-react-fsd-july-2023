@@ -15,6 +15,8 @@ const App = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  console.log("APP", email, password); // thakurutkarsh2@gmaul.com 1234
+
   return (
     <div id="App">
       <Router>
