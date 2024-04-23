@@ -8,6 +8,8 @@ import HelloClassComponent from "./1.BasicReact/1.HelloComponent/HelloClassCompo
 import RouterApp from "./12.ReactRouting/2.RouterApplicatoin/RouterApp";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 import App from "./00.Assignments/1.Authentication_using_react_router/component/App";
+import ReactAppContextProblemApi from "./14.ContextApi/1.ProblemStatement/components/ReactAppContextProblemApi";
+import ReactAppContextSolutionApi from "./14.ContextApi/2.SolutionUsingContextAPI/components/ReactAppContextSolutionApi";
 
 // document keyword is my REAL DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -25,7 +27,11 @@ root.render(
 
     {/* Assignment */}
 
-    <App />
+    {/* CONTEXT API */}
+    {/* <ReactAppContextProblemApi /> */}
+    <ReactAppContextSolutionApi />
+
+    {/* <App /> */}
   </React.StrictMode>
 );
 

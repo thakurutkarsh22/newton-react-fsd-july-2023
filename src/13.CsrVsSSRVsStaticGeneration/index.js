@@ -72,3 +72,5 @@
 */
 
 // READING MATERIAL: https://javascriptpatterns.vercel.app/patterns/rendering-patterns/server-side-rendering
+
+// NEXTJS DEMO: https://github.com/thakurutkarsh22/newton-nextjs-fsd
