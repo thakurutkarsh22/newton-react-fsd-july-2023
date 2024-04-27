@@ -23,6 +23,7 @@ import HelloClassComponent from "./1.BasicReact/1.HelloComponent/HelloClassCompo
 import PokemonApiClassComponent from "./10.ClassComponents/2.PokemonApiClassComponent/PokemonApiClassComponent";
 import PokemonKingdomMainPage from "./11.PokemonKingdom/Page/PokemonKingdomMainPage";
 import LifeCycle from "./10.ClassComponents/0.LifeCycleOfClassComponent/LifeCycle";
+import Portals from "./17.Portals/Portals";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -113,6 +114,36 @@ function App() {
       {/* <PokemonKingdomMainPage /> */}
 
       {/* <LifeCycle /> */}
+
+      <p>
+        asdajdaksjdakjsflsadjkf sadlkfjasldjfhlads sadlkjfbasldkjfladskjf
+        lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf lajsdbflasdjbfladsjbf
+        lasjdflsdjflasdjf ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf
+        sadlkfjasldjfhlads sadlkjfbasldkjfladskjf lasdjkflaskdjflasjkdf
+        ;asdihfldskjhfaldskjhf lajsdbflasdjbfladsjbf lasjdflsdjflasdjf
+        ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf sadlkfjasldjfhlads
+        sadlkjfbasldkjfladskjf lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf
+        lajsdbflasdjbfladsjbf lasjdflsdjflasdjf
+        ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf sadlkfjasldjfhlads
+        sadlkjfbasldkjfladskjf lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf
+        lajsdbflasdjbfladsjbf lasjdflsdjflasdjf
+        ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf sadlkfjasldjfhlads
+        sadlkjfbasldkjfladskjf lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf
+        lajsdbflasdjbfladsjbf lasjdflsdjflasdjf
+        ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf sadlkfjasldjfhlads
+        sadlkjfbasldkjfladskjf lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf
+        lajsdbflasdjbfladsjbf lasjdflsdjflasdjf
+        ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf sadlkfjasldjfhlads
+        sadlkjfbasldkjfladskjf lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf
+        lajsdbflasdjbfladsjbf lasjdflsdjflasdjf
+        ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf sadlkfjasldjfhlads
+        sadlkjfbasldkjfladskjf lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf
+        lajsdbflasdjbfladsjbf lasjdflsdjflasdjf ljaskflaskjfladsjkbf
+      </p>
+
+      <button onClick={() => {}}></button>
+
+      <Portals title={"Hey I am A popup"} />
     </>
   );
 }

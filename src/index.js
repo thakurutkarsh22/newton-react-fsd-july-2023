@@ -7,11 +7,12 @@ import HelloComponent from "./1.BasicReact/1.HelloComponent/HelloComponent";
 import HelloClassComponent from "./1.BasicReact/1.HelloComponent/HelloClassComponent";
 import RouterApp from "./12.ReactRouting/2.RouterApplicatoin/RouterApp";
 import { BrowserRouter, HashRouter } from "react-router-dom";
-import App from "./00.Assignments/1.Authentication_using_react_router/component/App";
+// import App from "./00.Assignments/1.Authentication_using_react_router/component/App";
 import ReactAppContextProblemApi from "./14.ContextApi/1.ProblemStatement/components/ReactAppContextProblemApi";
 import ReactAppContextSolutionApi from "./14.ContextApi/2.SolutionUsingContextAPI/components/ReactAppContextSolutionApi";
 import DarkThemeApp from "./15.DarkThemeAPP/DarkThemeApp";
 import ContextHellApp from "./16.ContextHell/ContextHellApp";
+import App from "./App";
 
 // document keyword is my REAL DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,7 +21,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* ---------- NORMAL APP ------- */}
-    {/* <App /> */}
+    <App />
     {/* ----------  ROUTER APP ------- */}
 
     {/* <BrowserRouter>
@@ -37,7 +38,7 @@ root.render(
       <DarkThemeApp />
     </BrowserRouter> */}
 
-    <ContextHellApp />
+    {/* <ContextHellApp /> */}
 
     {/* <App /> */}
   </React.StrictMode>
