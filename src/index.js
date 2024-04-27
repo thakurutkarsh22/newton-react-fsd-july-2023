@@ -11,6 +11,7 @@ import App from "./00.Assignments/1.Authentication_using_react_router/component/
 import ReactAppContextProblemApi from "./14.ContextApi/1.ProblemStatement/components/ReactAppContextProblemApi";
 import ReactAppContextSolutionApi from "./14.ContextApi/2.SolutionUsingContextAPI/components/ReactAppContextSolutionApi";
 import DarkThemeApp from "./15.DarkThemeAPP/DarkThemeApp";
+import ContextHellApp from "./16.ContextHell/ContextHellApp";
 
 // document keyword is my REAL DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,10 +32,12 @@ root.render(
     {/* CONTEXT API */}
     {/* <ReactAppContextProblemApi /> */}
     {/* <ReactAppContextSolutionApi /> */}
-
+    {/* 
     <BrowserRouter>
       <DarkThemeApp />
-    </BrowserRouter>
+    </BrowserRouter> */}
+
+    <ContextHellApp />
 
     {/* <App /> */}
   </React.StrictMode>

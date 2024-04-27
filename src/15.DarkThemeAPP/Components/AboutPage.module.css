@@ -1,0 +1,10 @@
+/* THIS TYPE OF CODE SHOULD GO TO THE MAIN CSS FILE (APP.CSS) */
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: yellow;
+  color: black;
+}
