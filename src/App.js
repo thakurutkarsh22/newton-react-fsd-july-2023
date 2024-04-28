@@ -24,6 +24,7 @@ import PokemonApiClassComponent from "./10.ClassComponents/2.PokemonApiClassComp
 import PokemonKingdomMainPage from "./11.PokemonKingdom/Page/PokemonKingdomMainPage";
 import LifeCycle from "./10.ClassComponents/0.LifeCycleOfClassComponent/LifeCycle";
 import Portals from "./17.Portals/Portals";
+import ContextApiClassComponentApp from "./14.ContextApi/3.ContextApiInClassCOmponenet/ContextApiClassComponentApp";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -115,7 +116,7 @@ function App() {
 
       {/* <LifeCycle /> */}
 
-      <p>
+      {/* <p>
         asdajdaksjdakjsflsadjkf sadlkfjasldjfhlads sadlkjfbasldkjfladskjf
         lasdjkflaskdjflasjkdf ;asdihfldskjhfaldskjhf lajsdbflasdjbfladsjbf
         lasjdflsdjflasdjf ljaskflaskjfladsjkbfasdajdaksjdakjsflsadjkf
@@ -143,7 +144,9 @@ function App() {
 
       <button onClick={() => {}}></button>
 
-      <Portals title={"Hey I am A popup"} />
+      <Portals title={"Hey I am A popup"} /> */}
+
+      <ContextApiClassComponentApp />
     </>
   );
 }
