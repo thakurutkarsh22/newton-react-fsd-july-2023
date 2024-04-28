@@ -25,6 +25,10 @@ import PokemonKingdomMainPage from "./11.PokemonKingdom/Page/PokemonKingdomMainP
 import LifeCycle from "./10.ClassComponents/0.LifeCycleOfClassComponent/LifeCycle";
 import Portals from "./17.Portals/Portals";
 import ContextApiClassComponentApp from "./14.ContextApi/3.ContextApiInClassCOmponenet/ContextApiClassComponentApp";
+import UseRefBasics from "./18.useRef/1.useRefBasic/UseRefBasics";
+import ShowLatestValAndPrevVal from "./18.useRef/2.useRefExamples/1.ShowLatestValAndPrevVal/ShowLatestValAndPrevVal";
+import SimpleFormInputBoxComponent from "./18.useRef/2.useRefExamples/2.SimpleFormInputBoxComponent/SimpleFormInputBoxComponent";
+import InputComponentForm from "./18.useRef/2.useRefExamples/3.InputComponentForm/InputComponentForm";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -146,7 +150,12 @@ function App() {
 
       <Portals title={"Hey I am A popup"} /> */}
 
-      <ContextApiClassComponentApp />
+      {/* <ContextApiClassComponentApp /> */}
+
+      {/* <UseRefBasics /> */}
+      {/* <ShowLatestValAndPrevVal /> */}
+      <SimpleFormInputBoxComponent />
+      <InputComponentForm />
     </>
   );
 }
