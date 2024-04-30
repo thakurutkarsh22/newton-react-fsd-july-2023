@@ -1,4 +1,9 @@
-function Input() {
+import React from "react";
+
+function Input(props, ref) {
+  // TODO: See this ref Passing.
+
+  const { asd } = props;
   return (
     <div
       style={{
@@ -9,6 +14,7 @@ function Input() {
       }}
     >
       <input
+        ref={ref}
         style={{
           width: "500px",
           height: "20px",
@@ -21,4 +27,4 @@ function Input() {
   );
 }
 
-export default Input;
+export default React.forwardRef(Input);

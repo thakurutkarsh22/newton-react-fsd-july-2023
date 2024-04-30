@@ -5,12 +5,15 @@ function InputComponentForm() {
   const inputBoxReference = useRef();
 
   useEffect(() => {
-    // inputBoxReference.current.focus();
+    inputBoxReference.current.focus();
+    console.log(inputBoxReference, "1");
   });
+
+  console.log(inputBoxReference, "2");
   return (
     <>
       <h1>hello Input component form</h1>
-      <Input ref={inputBoxReference} />
+      <Input ref={inputBoxReference} asd={inputBoxReference} />
     </>
   );
 }
