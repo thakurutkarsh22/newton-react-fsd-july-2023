@@ -30,6 +30,7 @@ import ShowLatestValAndPrevVal from "./18.useRef/2.useRefExamples/1.ShowLatestVa
 import SimpleFormInputBoxComponent from "./18.useRef/2.useRefExamples/2.SimpleFormInputBoxComponent/SimpleFormInputBoxComponent";
 import InputComponentForm from "./18.useRef/2.useRefExamples/3.InputComponentForm/InputComponentForm";
 import UndoMessage from "./18.useRef/2.useRefExamples/4.UndoMessage/UndoMessage";
+import CounterReducerApp from "./19.useReducer/2.Examples/1.CounterApp/CounterReducerApp";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -157,7 +158,8 @@ function App() {
       {/* <ShowLatestValAndPrevVal /> */}
       {/* <SimpleFormInputBoxComponent /> */}
       {/* <InputComponentForm /> */}
-      <UndoMessage />
+      {/* <UndoMessage /> */}
+      <CounterReducerApp />
     </>
   );
 }
