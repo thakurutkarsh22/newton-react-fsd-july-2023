@@ -13,6 +13,7 @@ import ReactAppContextSolutionApi from "./14.ContextApi/2.SolutionUsingContextAP
 import DarkThemeApp from "./15.DarkThemeAPP/DarkThemeApp";
 import ContextHellApp from "./16.ContextHell/ContextHellApp";
 import App from "./App";
+import ReactLazyApp from "./20.Performance/4.React.lazy/ReactLazyApp";
 
 // document keyword is my REAL DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,7 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* ---------- NORMAL APP ------- */}
-    <App />
+    {/* <App /> */}
     {/* ----------  ROUTER APP ------- */}
 
     {/* <BrowserRouter>
@@ -41,6 +42,9 @@ root.render(
     {/* <ContextHellApp /> */}
 
     {/* <App /> */}
+    <BrowserRouter>
+      <ReactLazyApp />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
