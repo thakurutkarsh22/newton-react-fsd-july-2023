@@ -8,7 +8,7 @@ import MultipleState from "./1.BasicReact/5.MultipleState/1.Multiple_Use_State/M
 import SingleUseState from "./1.BasicReact/5.MultipleState/2.Single_Use_State/SingleUseState";
 import MainContentComponent from "./1.BasicReact/6.WrapperBeautifulComponent/MainContentComponent";
 import BeautifulWrapper from "./1.BasicReact/6.WrapperBeautifulComponent/BeautifulWrapper";
-import Parent from "./2.Communication/3.Sibling/Parent";
+// import Parent from "./2.Communication/3.Sibling/Parent";
 import KeysAndList from "./3.KeysAndList/1.NoKeyProblems/KeysAndListProblem";
 import KeysAndListSolution from "./3.KeysAndList/1.NoKeyProblems/KeysAndListSolution";
 import IndexAsAKey from "./3.KeysAndList/2.IndexAsKey/IndexAsAKey";
@@ -31,6 +31,10 @@ import SimpleFormInputBoxComponent from "./18.useRef/2.useRefExamples/2.SimpleFo
 import InputComponentForm from "./18.useRef/2.useRefExamples/3.InputComponentForm/InputComponentForm";
 import UndoMessage from "./18.useRef/2.useRefExamples/4.UndoMessage/UndoMessage";
 import CounterReducerApp from "./19.useReducer/2.Examples/1.CounterApp/CounterReducerApp";
+import Basics from "./20.Performance/1.Basic/basics";
+import Parent from "./20.Performance/2.Re-rendering/3.FunctionalProps/Parent";
+// import Parent from "./20.Performance/2.Re-rendering/2.ValueProps/Parent";
+// import Parent from "./20.Performance/2.Re-rendering/1.NoProps/Parent";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
 // import Parent from "./2.Communication/1.ParentToCHild/Parent";
 
@@ -159,7 +163,9 @@ function App() {
       {/* <SimpleFormInputBoxComponent /> */}
       {/* <InputComponentForm /> */}
       {/* <UndoMessage /> */}
-      <CounterReducerApp />
+      {/* <CounterReducerApp /> */}
+      {/* <Basics /> */}
+      <Parent />
     </>
   );
 }
