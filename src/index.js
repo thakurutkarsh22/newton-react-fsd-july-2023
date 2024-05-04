@@ -22,7 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* ---------- NORMAL APP ------- */}
-    {/* <App /> */}
+    <App />
     {/* ----------  ROUTER APP ------- */}
 
     {/* <BrowserRouter>
@@ -42,9 +42,9 @@ root.render(
     {/* <ContextHellApp /> */}
 
     {/* <App /> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <ReactLazyApp />
-    </BrowserRouter>
+    </BrowserRouter> */}
   </React.StrictMode>
 );
 

@@ -6,16 +6,18 @@ function Parent() {
 
   const [count, setcounter] = useState(0);
 
+  let i = 12;
+
   // counterHandler here will have only 1 address across Re-renders;
-  // const counterHandler = useCallback(() => {
-  //   setcounter((old) => old + 1);
-  // }, []);
+  const counterHandler = useCallback(() => {
+    setcounter((old) => old + 1);
+  }, []);
 
   // abc@123 -> render 1
   // abc@111 -> render 2
-  function counterHandler() {
-    setcounter((old) => old + 1);
-  }
+  // function counterHandler() {
+  //   setcounter((old) => old + 1);
+  // }
 
   const arr = useMemo(() => [1, 2, 3, 4], []);
   const obj = {

@@ -33,6 +33,7 @@ import UndoMessage from "./18.useRef/2.useRefExamples/4.UndoMessage/UndoMessage"
 import CounterReducerApp from "./19.useReducer/2.Examples/1.CounterApp/CounterReducerApp";
 import Basics from "./20.Performance/1.Basic/basics";
 import Parent from "./20.Performance/2.Re-rendering/3.FunctionalProps/Parent";
+import WindowingProblem from "./20.Performance/3.Windowing/1.Problem/WindowingProblem";
 // import Parent from "./20.Performance/2.Re-rendering/2.ValueProps/Parent";
 // import Parent from "./20.Performance/2.Re-rendering/1.NoProps/Parent";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
@@ -165,7 +166,9 @@ function App() {
       {/* <UndoMessage /> */}
       {/* <CounterReducerApp /> */}
       {/* <Basics /> */}
-      <Parent />
+      {/* <Parent /> */}
+
+      <WindowingProblem />
     </>
   );
 }
