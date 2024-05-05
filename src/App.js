@@ -35,6 +35,10 @@ import Basics from "./20.Performance/1.Basic/basics";
 import Parent from "./20.Performance/2.Re-rendering/3.FunctionalProps/Parent";
 import WindowingProblem from "./20.Performance/3.Windowing/1.Problem/WindowingProblem";
 import SwitchList from "./0.Interview/1.SwitchList/SwitchList";
+// import Forms from "./21.customhooks/1.FormWithLocalStorage/1.TradationalMethod/Forms";
+import Forms from "./21.customhooks/1.FormWithLocalStorage/2.CustomHookMethod/Forms";
+import Test from "./21.customhooks/1.FormWithLocalStorage/2.CustomHookMethod/Test";
+// import Forms from "./21.customhooks/1.FormWithLocalStorage/2.CustomHookMethod/Forms";
 // import Parent from "./20.Performance/2.Re-rendering/2.ValueProps/Parent";
 // import Parent from "./20.Performance/2.Re-rendering/1.NoProps/Parent";
 // import Parent from "./2.Communication/2.ChildToParent/Parent";
@@ -170,7 +174,9 @@ function App() {
       {/* <Parent /> */}
 
       {/* <WindowingProblem /> */}
-      <SwitchList />
+      {/* <SwitchList /> */}
+      {/* <Forms /> */}
+      <Test />
     </>
   );
 }
