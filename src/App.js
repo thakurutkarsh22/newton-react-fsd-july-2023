@@ -38,6 +38,8 @@ import SwitchList from "./0.Interview/1.SwitchList/SwitchList";
 // import Forms from "./21.customhooks/1.FormWithLocalStorage/1.TradationalMethod/Forms";
 import Forms from "./21.customhooks/1.FormWithLocalStorage/2.CustomHookMethod/Forms";
 import Test from "./21.customhooks/1.FormWithLocalStorage/2.CustomHookMethod/Test";
+import PokemonApp from "./21.customhooks/2.useFetch/2.CustomHookMethod/PokemonApp";
+// import PokemonApp from "./21.customhooks/2.useFetch/1.Traditional/PokemonApp";
 // import Forms from "./21.customhooks/1.FormWithLocalStorage/2.CustomHookMethod/Forms";
 // import Parent from "./20.Performance/2.Re-rendering/2.ValueProps/Parent";
 // import Parent from "./20.Performance/2.Re-rendering/1.NoProps/Parent";
@@ -176,7 +178,8 @@ function App() {
       {/* <WindowingProblem /> */}
       {/* <SwitchList /> */}
       {/* <Forms /> */}
-      <Test />
+      {/* <Test /> */}
+      <PokemonApp />
     </>
   );
 }
