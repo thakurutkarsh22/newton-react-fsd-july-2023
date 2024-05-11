@@ -180,15 +180,15 @@ function App() {
       {/* <Parent /> */}
 
       {/* <WindowingProblem /> */}
-      {/* <SwitchList /> */}
+      <SwitchList />
       {/* <Forms /> */}
       {/* <Test /> */}
       {/* <PokemonApp /> */}
       {/* <AuthApp /> */}
 
-      <Provider store={basicReduxStore()}>
+      {/* <Provider store={basicReduxStore()}>
         <ReduxComponent />
-      </Provider>
+      </Provider> */}
     </>
   );
 }

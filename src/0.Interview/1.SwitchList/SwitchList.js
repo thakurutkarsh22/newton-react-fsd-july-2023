@@ -8,6 +8,19 @@ function SwitchList() {
 
   function handleClick(id, list, title) {
     console.log(id, list, title, "want to delte itself");
+    if (list === "LIST1") {
+      const filteredItem = list1.filter((item) => item.id === id);
+      const arrayExceptFilteredPlayr = list1.filter((item) => item.id !== id);
+
+      setList1(arrayExceptFilteredPlayr);
+      setList2((oldState) => [...filteredItem, ...oldState]);
+    } else {
+      const filteredItem = list2.filter((item) => item.id === id);
+      const arrayExceptFilteredPlayr = list2.filter((item) => item.id !== id);
+
+      setList2(arrayExceptFilteredPlayr);
+      setList1((oldState) => [...filteredItem, ...oldState]);
+    }
 
     // TODO: you guys have to do.
 
