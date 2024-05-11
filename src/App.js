@@ -182,7 +182,7 @@ function App() {
       {/* <Parent /> */}
 
       {/* <WindowingProblem /> */}
-      {/* <SwitchList /> */}
+      <SwitchList />
       <EmployeeHierarchy data={hirarchyDataStructure} />
       {/* <Forms /> */}
       {/* <Test /> */}
