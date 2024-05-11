@@ -43,6 +43,8 @@ import AuthApp from "./22.Authentication/AuthApp";
 import ReduxComponent from "./23.Redux/1.BasicExample/ReduxComponent";
 import { Provider } from "react-redux";
 import basicReduxStore from "./23.Redux/1.BasicExample/store/store";
+import EmployeeHierarchy from "./0.Interview/2.EmployeeHirarchy/2.Answer/EmployeeHierarchy";
+import hirarchyDataStructure from "./0.Interview/2.EmployeeHirarchy/2.Answer/dataFile";
 // import PokemonApp from "./21.customhooks/2.useFetch/1.Traditional/PokemonApp";
 // import Forms from "./21.customhooks/1.FormWithLocalStorage/2.CustomHookMethod/Forms";
 // import Parent from "./20.Performance/2.Re-rendering/2.ValueProps/Parent";
@@ -180,7 +182,8 @@ function App() {
       {/* <Parent /> */}
 
       {/* <WindowingProblem /> */}
-      <SwitchList />
+      {/* <SwitchList /> */}
+      <EmployeeHierarchy data={hirarchyDataStructure} />
       {/* <Forms /> */}
       {/* <Test /> */}
       {/* <PokemonApp /> */}
