@@ -14,6 +14,8 @@ import DarkThemeApp from "./15.DarkThemeAPP/DarkThemeApp";
 import ContextHellApp from "./16.ContextHell/ContextHellApp";
 import App from "./App";
 import ReactLazyApp from "./20.Performance/4.React.lazy/ReactLazyApp";
+import MusicPlayBackApp from "./25.MusicPlaybackProject/MusicPlayBackApp";
+import UserProvider from "./25.MusicPlaybackProject/src/providers/UserProvider";
 
 // document keyword is my REAL DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,7 +24,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* ---------- NORMAL APP ------- */}
-    <App />
+    {/* <App /> */}
     {/* ----------  ROUTER APP ------- */}
 
     {/* <BrowserRouter>
@@ -45,6 +47,14 @@ root.render(
     {/* <BrowserRouter>
       <ReactLazyApp />
     </BrowserRouter> */}
+
+    {/* PROJECT: MUSIC LIBRARY */}
+    {/* ***** MUSIC APP ****** */}
+    <BrowserRouter>
+      <UserProvider>
+        <MusicPlayBackApp />
+      </UserProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
