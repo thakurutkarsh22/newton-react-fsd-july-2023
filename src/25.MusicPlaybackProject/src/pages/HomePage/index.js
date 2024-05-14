@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 import Loader from "../../components/commonUI/Loader/Loader";
+import MusicPlayer from "../../components/Music/MusicPlayer";
 
 function HomePage() {
   const [musicList, setMusicList] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const [selectedMusic, setSelectedMusic] = useState({
+    title: "",
+    _id: "",
+    audio_url: "",
+    thumbnail: "",
+  });
 
   console.log(musicList);
 
@@ -42,10 +50,34 @@ function HomePage() {
       {!loading && (
         <section>
           {musicList.map((music) => {
-            const { title } = music;
-            return <div>{title}</div>;
+            const { title, _id, audio_url, thumbnail } = music;
+            {
+              /* TODO: music card */
+            }
+            return (
+              <div
+                onClick={() =>
+                  setSelectedMusic({
+                    title,
+                    _id,
+                    audio_url,
+                    thumbnail,
+                  })
+                }
+              >
+                {title} - {_id}
+              </div>
+            );
           })}
         </section>
+      )}
+      {selectedMusic && (
+        <MusicPlayer
+          title={selectedMusic.title}
+          _id={selectedMusic._id}
+          audio_url={selectedMusic.audio_url}
+          thumbnail={selectedMusic.thumbnail}
+        />
       )}
     </>
   );

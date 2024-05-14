@@ -44,3 +44,20 @@
 * {
   box-sizing: border-box;
 }
+
+.music-player {
+  width: 100%;
+  background-color: orange;
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px;
+}
+
+.music-player-image {
+  width: 20px;
+  height: 20px;
+}

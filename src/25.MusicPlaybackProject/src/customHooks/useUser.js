@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import UserContext from "../../../22.Authentication/context/userContext";
+import { UserContext } from "../providers/UserProvider";
 
 function useUser() {
+  // conditions ...
   return useContext(UserContext);
 }
 
